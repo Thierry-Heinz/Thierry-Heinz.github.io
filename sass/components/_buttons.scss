@@ -8,6 +8,40 @@ button {
     color: $white;
     @include background-gradient;
     box-shadow: $button-shadow;
+
+    &::before {
+      border-radius: $button-radius;
+      content: "";
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      opacity: 0;
+      height: 100%;
+      top: 0;
+      left: 0;
+      @include background-gradient-light;
+      transition: opacity 200ms ease-in-out;
+    }
+    &::after {
+      border-radius: $button-radius;
+      content: "";
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      opacity: 0;
+      height: 100%;
+      top: 0;
+      left: 0;
+      box-shadow: $button-shadow-darker;
+      transition: opacity 200ms ease-in-out;
+    }
+    &:hover,
+    &:active {
+      &::before,
+      &::after {
+        opacity: 1;
+      }
+    }
   }
   &.btn--grey {
     background-color: $very-light-grey;
@@ -18,10 +52,6 @@ button {
     padding: 16px 48px;
     transform: translateY(0px);
     transition: transform 150ms ease-out;
-    &:hover,
-    &:active {
-      transform: translateY(5px);
-    }
   }
 
   &.btn--heart {

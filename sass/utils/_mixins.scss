@@ -2,3 +2,10 @@
 @mixin background-gradient {
   background: linear-gradient(180deg, #e872da, #a75ddb);
 }
+@mixin background-gradient-light {
+  background: linear-gradient(
+    180deg,
+    lighten(#e872da, 5%),
+    lighten(#a75ddb, 2%)
+  );
+}
