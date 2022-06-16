@@ -1,4 +1,19 @@
+/** Style for main content **/
 main {
   display: flex;
   flex-direction: column;
+}
+
+.container {
+  /** Responsive **/
+  @include tablet {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include desktop {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

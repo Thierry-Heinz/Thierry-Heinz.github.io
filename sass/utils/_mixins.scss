@@ -1,3 +1,5 @@
+/** Mixins **/
+
 /** Gradients **/
 @mixin background-gradient {
   background: linear-gradient(180deg, #e872da, #a75ddb);
@@ -8,4 +10,17 @@
     lighten(#e872da, 5%),
     lighten(#a75ddb, 2%)
   );
+}
+
+/** Responsive Mixins **/
+@mixin tablet {
+  @media screen and (min-width: 481px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
 }

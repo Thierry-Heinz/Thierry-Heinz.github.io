@@ -4,6 +4,9 @@ body.restaurant {
   .restaurant-menu {
     padding: 0px 20px;
     background-color: $very-light-grey;
+    width: 100%;
+    @extend .container;
+
     section {
       margin-bottom: 45px;
     }
@@ -31,5 +34,7 @@ body.restaurant {
     background-color: $very-light-grey;
     text-align: center;
     padding-bottom: 81px;
+    width: 100%;
+    @extend .container;
   }
 }

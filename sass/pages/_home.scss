@@ -3,7 +3,7 @@
 body.home {
   position: relative;
   /* Screen Loader */
-  .screen-loader {
+  /*.screen-loader {
     z-index: 100;
     position: absolute;
     top: 0;
@@ -20,14 +20,31 @@ body.home {
       left: calc(50vw - 25px);
       @extend .roll-left--infinite;
     }
-  }
+  }*/
 
   /* restaurants section */
-  section.restaurants__section {
+  .restaurants__section {
     background-color: $very-light-grey;
-    display: flex;
-    flex-direction: column;
     padding: 60px $gutter 65px $gutter;
-    gap: $gap-card;
+
+    &__title {
+      @extend .container;
+    }
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: $gap-card;
+      @extend .container;
+
+      /** Responsive **/
+      @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: $gap-card * 1.5;
+      }
+      @include desktop {
+        gap: $gap-card * 2;
+      }
+    }
   }
 }

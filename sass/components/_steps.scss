@@ -5,12 +5,16 @@
   display: flex;
   flex-direction: column;
   padding: 53px $gutter 67px $gutter;
+  .steps__title {
+    @extend .container;
+  }
 
   .steps__container {
     display: flex;
     flex-direction: column;
     gap: $gap-step;
     padding-left: 12px;
+    @extend .container;
   }
 
   .step {
@@ -41,6 +45,25 @@
       background-color: $hover-color;
       i {
         color: $brand-primary;
+      }
+    }
+  }
+
+  /** responsive **/
+  @include tablet {
+    .steps__container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      .step {
+        flex: 1 0 100%;
+      }
+    }
+  }
+  @include desktop {
+    .steps__container {
+      width: 100%;
+      .step {
+        flex: 1 0 30%;
       }
     }
   }

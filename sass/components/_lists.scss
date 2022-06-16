@@ -25,11 +25,15 @@
       align-items: flex-end;
       justify-content: space-between;
       padding: 15px 24px 15px 10px;
+
+      width: 100%;
       h3 {
         margin: 0 0 10px 0;
+        text-overflow: ellipsis;
       }
       p {
         margin: 0;
+        text-overflow: ellipsis;
       }
       .list-item__price {
         font-weight: 700;
@@ -60,6 +64,14 @@
           @extend .roll-right;
         }
       }
+    }
+  }
+
+  /** Responsive **/
+  @include desktop {
+    flex-direction: row;
+    .list-item {
+      flex: 1 0 auto;
     }
   }
 }
