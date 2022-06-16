@@ -7,8 +7,11 @@
     <title>Ohmyfood - restaurant La note enchantée</title>
     <!-- Import Normalize from CDN -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
     <!-- Import Font from CDN -->
@@ -26,20 +29,20 @@
     ></script>
 
     <!-- Import Style -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body>
+  <body class="resturant">
     <!-- Begin Header -->
     <header>
-      <a href="index.html" class="btn"
-        ><i class="fa-solid fa-arrow-left"></i
-      ></a>
-      <div class="header__logo__container">
-        <a href="index.html">
+      <div class="logo__header">
+        <a href="index.html" class="btn btn--return"
+          ><i class="fa-solid fa-arrow-left"></i
+        ></a>
+        <a href="index.html" class="logo__header__container">
           <img
             src="./images/logo/ohmyfood@2x.svg"
             alt="Logo du service OhmyFood"
-            class="header__logo"
+            class="logo__header__container__img"
           />
         </a>
       </div>
@@ -48,17 +51,20 @@
     <!-- Begin Main -->
     <main>
       <!-- Begin Hero section -->
-      <section class="hero__section">
-        <div class="hero____section__img__container">
+      <section class="hero hero--img">
+        <div class="hero__img__container">
           <img
             src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
             alt="Photographie du restaurant La note enchantée"
-            class="hero__section__img"
+            class="hero__img"
           />
         </div>
-        <div class="hero__section__content">
+        <div class="hero__content">
           <h1 class="hero__title">La note enchantée</h1>
-          <i class="fa-regular fa-heart"></i>
+          <button class="btn btn--heart">
+            <i class="fa-solid fa-heart icon__heart icon__heart--overlay"></i>
+            <i class="fa-regular fa-heart icon__heart icon__heart--base"></i>
+          </button>
         </div>
       </section>
       <!-- End Hero section -->
@@ -233,7 +239,7 @@
 
       <!-- Begin Order section -->
       <div class="order-button__container">
-        <button class="order__button">Commander</button>
+        <button class="btn btn--gradient btn--order">Commander</button>
       </div>
       <!-- End Order section -->
     </main>
@@ -241,12 +247,12 @@
 
     <!-- Begin Footer -->
     <footer>
-      <div class="footer__logo__container">
+      <div class="logo__footer">
         <a href="index.html">
           <img
             src="./images/logo/ohmyfood@2x.svg"
             alt=""
-            class="footer__logo"
+            class="logo__footer__img"
           />
         </a>
       </div>

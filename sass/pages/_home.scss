@@ -1,0 +1,12 @@
+/* Home specific style */
+
+body.home {
+  /* restaurants section */
+  section.restaurants__section {
+    background-color: $very-light-grey;
+    display: flex;
+    flex-direction: column;
+    padding: 60px $gutter 65px $gutter;
+    gap: $gap-card;
+  }
+}

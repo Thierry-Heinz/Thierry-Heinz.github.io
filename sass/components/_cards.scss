@@ -1,0 +1,39 @@
+/** Card component **/
+.card {
+  background-color: $white;
+  border-radius: $card-radius;
+  overflow: hidden;
+  box-shadow: $card-shadow;
+  text-decoration: none;
+  color: $very-dark-grey;
+
+  &__img {
+    position: relative;
+    height: 174px;
+    .label {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 12px;
+      color: $label-color;
+      background-color: $brand-tertiary;
+      border-radius: 2px;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px 20px 14px;
+  }
+  &__content {
+    h3 {
+      margin: 0 0 12px 0;
+      font-weight: 700;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}

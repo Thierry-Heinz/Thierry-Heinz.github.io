@@ -1,0 +1,25 @@
+footer {
+  color: $white;
+  background-color: $dark-grey;
+  padding: 25px 25px 36px 25px;
+
+  .logo__footer__img {
+    filter: invert(1);
+    width: 100px;
+    margin-bottom: 25px;
+  }
+
+  ul.footer__menu {
+    li {
+      margin-bottom: 15px;
+      i {
+        margin-right: 12px;
+      }
+      .menu__link {
+        font-size: 15px;
+        text-decoration: none;
+        color: $white;
+      }
+    }
+  }
+}
