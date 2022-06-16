@@ -1,0 +1,47 @@
+/** Steps component **/
+
+.steps {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  padding: 53px $gutter 67px $gutter;
+
+  .steps__container {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-step;
+    padding-left: 12px;
+  }
+
+  .step {
+    border-radius: $step-radius;
+    position: relative;
+    display: flex;
+    padding: 35px;
+    gap: 25px;
+    &__number {
+      background-color: $brand-primary;
+      color: $white;
+      font-size: 12px;
+      line-height: 25px;
+      vertical-align: middle;
+      position: absolute;
+      top: calc(50% - 12.5px);
+      left: -12.5px;
+      height: 25px;
+      width: 25px;
+      border-radius: $step-number-radius;
+    }
+    i {
+      color: $grey;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $hover-color;
+      i {
+        color: $brand-primary;
+      }
+    }
+  }
+}

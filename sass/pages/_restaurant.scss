@@ -1,0 +1,35 @@
+/* Specific style for restaurant pages */
+
+body.restaurant {
+  .restaurant-menu {
+    padding: 0px 20px;
+    background-color: $very-light-grey;
+    section {
+      margin-bottom: 45px;
+    }
+
+    h2 {
+      font-size: 14px;
+      font-weight: 300;
+      text-transform: uppercase;
+      position: relative;
+      margin-bottom: 14px;
+      padding-bottom: 5px;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        background-color: $brand-tertiary;
+        bottom: -0;
+        left: 0;
+      }
+    }
+  }
+
+  .order-button__container {
+    background-color: $very-light-grey;
+    text-align: center;
+    padding-bottom: 81px;
+  }
+}

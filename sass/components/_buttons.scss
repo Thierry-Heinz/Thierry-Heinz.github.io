@@ -1,0 +1,59 @@
+/* Buttons */
+button {
+  border-radius: $button-radius;
+  padding: 20px 22px;
+  font-weight: 700;
+
+  &.btn--gradient {
+    color: $white;
+    @include background-gradient;
+    box-shadow: $button-shadow;
+  }
+  &.btn--grey {
+    background-color: $very-light-grey;
+    box-shadow: $button-shadow;
+  }
+
+  &.btn--order {
+    padding: 16px 48px;
+    transform: translateY(0px);
+    transition: transform 150ms ease-out;
+    &:hover,
+    &:active {
+      transform: translateY(5px);
+    }
+  }
+
+  &.btn--heart {
+    background-color: transparent;
+    position: relative;
+    .icon__heart {
+      font-size: 20px;
+      position: absolute;
+      top: calc(50% - 10px);
+      left: calc(50% - 10px);
+      &--base {
+        opacity: 1;
+        transition: opacity 500ms ease-in-out;
+      }
+      &--overlay {
+        opacity: 0;
+        transition: opacity 500ms ease-in-out;
+        @include background-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    &:hover,
+    &:active {
+      .icon__heart {
+        &--base {
+          opacity: 0;
+        }
+        &--overlay {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

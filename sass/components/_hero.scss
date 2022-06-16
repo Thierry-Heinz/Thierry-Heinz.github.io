@@ -1,0 +1,45 @@
+/** Hero component **/
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &.hero--text {
+    background-color: $very-light-grey;
+    padding-top: 43px;
+    padding-bottom: 57px;
+    padding-left: $gutter;
+    padding-right: $gutter;
+
+    span {
+      font-weight: 300;
+      margin-bottom: 36px;
+    }
+  }
+
+  &.hero--img {
+    position: relative;
+    .hero__content {
+      display: flex;
+      position: absolute;
+      background-color: $very-light-grey;
+      flex-direction: row;
+      margin: auto;
+      border-radius: 40px 40px 0px 0px;
+      bottom: 0;
+      width: 100%;
+      align-items: center;
+      padding: 40px 20px 10px 20px;
+      justify-content: space-between;
+
+      .hero__title {
+        font-family: "Shrikhand", cursive;
+        font-size: 25px;
+        margin: 0;
+      }
+    }
+  }
+}

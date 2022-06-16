@@ -1,0 +1,36 @@
+header {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.logo__header {
+  position: relative;
+  padding: 23px 20px 12px 20px;
+  &__container {
+    width: 163px;
+    display: block;
+    height: 28px;
+    margin: auto;
+    &__img {
+      object-fit: contain;
+    }
+  }
+  .btn--return {
+    position: absolute;
+    left: 20px;
+  }
+}
+
+header {
+  address {
+    background-color: $light-grey;
+    font-style: normal;
+    //font-size: 12px;
+    padding: 16px 0px;
+    box-shadow: inset 0 5px 6px -5px rgb(0 0 0 / 70%);
+  }
+}
