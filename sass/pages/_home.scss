@@ -3,7 +3,7 @@
 body.home {
   position: relative;
   /* Screen Loader */
-  /*.screen-loader {
+  .screen-loader {
     z-index: 100;
     position: absolute;
     top: 0;
@@ -20,7 +20,7 @@ body.home {
       left: calc(50vw - 25px);
       @extend .roll-left--infinite;
     }
-  }*/
+  }
 
   /* restaurants section */
   .restaurants__section {
