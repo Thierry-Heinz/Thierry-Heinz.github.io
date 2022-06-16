@@ -8,6 +8,10 @@ button {
     color: $white;
     @include background-gradient;
     box-shadow: $button-shadow;
+    position: relative;
+
+    transform: translate3d(0, 0, 0);
+    transition: all 150ms ease-out;
 
     &::before {
       border-radius: $button-radius;
@@ -37,6 +41,7 @@ button {
     }
     &:hover,
     &:active {
+      transform: translate3d(0, 0, 0);
       &::before,
       &::after {
         opacity: 1;
@@ -50,8 +55,6 @@ button {
 
   &.btn--order {
     padding: 16px 48px;
-    transform: translateY(0px);
-    transition: transform 150ms ease-out;
   }
 
   &.btn--heart {

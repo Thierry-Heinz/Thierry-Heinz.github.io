@@ -57,7 +57,7 @@
       & .list-item__check {
         transform: translateX(0px);
         i {
-          @extend .roll;
+          @extend .roll-right;
         }
       }
     }

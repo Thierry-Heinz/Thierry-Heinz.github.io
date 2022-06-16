@@ -1,6 +1,27 @@
 /* Home specific style */
 
 body.home {
+  position: relative;
+  /* Screen Loader */
+  .screen-loader {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $brand-primary;
+    color: $white;
+    @extend .fade-out;
+    &__icon {
+      font-size: 50px;
+      position: absolute;
+      top: calc(50vh - 25px);
+      left: calc(50vw - 25px);
+      @extend .roll-left--infinite;
+    }
+  }
+
   /* restaurants section */
   section.restaurants__section {
     background-color: $very-light-grey;
