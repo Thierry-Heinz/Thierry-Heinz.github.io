@@ -5,6 +5,7 @@ body.restaurant {
     padding: 0px 20px;
     background-color: $very-light-grey;
     width: 100%;
+    z-index: 100;
     @extend .container;
 
     section {
@@ -12,7 +13,7 @@ body.restaurant {
     }
 
     h2 {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 300;
       text-transform: uppercase;
       position: relative;

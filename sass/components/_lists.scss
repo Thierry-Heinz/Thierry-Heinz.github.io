@@ -1,11 +1,11 @@
 .list {
+  --check-width: 60px;
+
   display: flex;
   flex-direction: column;
   gap: $gap-list;
   .list-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    position: relative;
     background-color: $white;
     border-radius: $list-radius;
     box-shadow: $list-item-shadow;
@@ -20,44 +20,68 @@
     }
 
     &__body {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-end;
-      justify-content: space-between;
       padding: 15px 24px 15px 10px;
-
       width: 100%;
-      h3 {
-        margin: 0 0 10px 0;
-        text-overflow: ellipsis;
-      }
-      p {
-        margin: 0;
-        text-overflow: ellipsis;
+      transition: width 500ms ease-out;
+
+      .list-item__content {
+        display: inline-block;
+        width: calc(100% - 40px);
+
+        * {
+          text-overflow: ellipsis;
+          width: 100%;
+          overflow: hidden;
+          white-space: nowrap;
+          line-height: 1;
+        }
+        h3 {
+          margin: 0 0 5px 0;
+          font-size: 16px;
+        }
+        p {
+          margin: 0;
+          font-size: 14px;
+          display: inline-block;
+          vertical-align: bottom;
+        }
       }
       .list-item__price {
+        font-size: 16px;
         font-weight: 700;
+        text-align: right;
+        display: inline-block;
+        width: 35px;
+        vertical-align: bottom;
       }
     }
 
     &__check {
+      display: block;
+      height: 101%;
+      right: 0;
+      position: absolute;
+      top: 0;
       background-color: $brand-tertiary;
       color: $white;
-      width: 40px;
-      transform: translateX(40px);
+      width: var(--check-width);
+      transform: translateX(var(--check-width));
       transition: transform 500ms ease-out;
-
       text-align: center;
       i {
-        font-size: 20px;
-        top: calc(50% - 10px);
-        left: 25%;
+        font-size: 24px;
+        top: calc(50% - 12px);
+        left: calc(50% - 12px);
         position: absolute;
       }
     }
 
     &:hover,
+    &:focus,
     &:active {
+      & .list-item__body {
+        width: calc(100% - var(--check-width));
+      }
       & .list-item__check {
         transform: translateX(0px);
         i {

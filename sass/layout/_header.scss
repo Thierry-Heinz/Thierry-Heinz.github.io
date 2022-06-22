@@ -29,8 +29,11 @@ header {
   address {
     background-color: $light-grey;
     font-style: normal;
-    //font-size: 12px;
+    font-size: 16px;
     padding: 16px 0px;
     box-shadow: inset 0 5px 6px -5px rgb(0 0 0 / 70%);
+    i {
+      margin-right: 20px;
+    }
   }
 }

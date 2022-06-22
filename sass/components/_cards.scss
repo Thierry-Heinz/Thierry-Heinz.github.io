@@ -28,11 +28,12 @@
     padding: 12px 24px 20px 14px;
   }
   &__content {
-    h3 {
-      margin: 0 0 12px 0;
+    .card__title {
+      margin: 0 0 5px 0;
       font-weight: 700;
     }
-    p {
+    .card__info {
+      font-size: 18px;
       margin: 0;
     }
   }

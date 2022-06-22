@@ -13,8 +13,12 @@
     padding-bottom: 57px;
     padding-left: $gutter;
     padding-right: $gutter;
+    /* .hero__title {
+      font
+    } */
 
     span {
+      font-size: 19px;
       font-weight: 300;
       margin-bottom: 36px;
     }
@@ -22,7 +26,19 @@
 
   &.hero--img {
     position: relative;
+    height: 335px;
     width: 100%;
+    .hero__img__container {
+      position: absolute;
+      top: 0;
+      // height: 250px;
+      height: 300px;
+      z-index: 50;
+      width: 100%;
+      img {
+        object-position: center;
+      }
+    }
     .hero__content {
       display: flex;
       position: absolute;
@@ -39,7 +55,7 @@
 
       .hero__title {
         font-family: "Shrikhand", cursive;
-        font-size: 25px;
+        font-weight: 500;
         margin: 0;
       }
     }
