@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: $gap-list;
+  flex-wrap: wrap;
 
   .list-item {
     @extend .fade-in-top;
@@ -36,8 +37,6 @@
       .list-item__content {
         display: inline-block;
         width: calc(100% - 40px);
-        overflow: hidden;
-        text-overflow: ellipsis;
 
         * {
           text-overflow: ellipsis;
@@ -105,7 +104,7 @@
   @include desktop {
     flex-direction: row;
     .list-item {
-      flex: 1 0 auto;
+      flex: 0 1 49%;
     }
   }
 }
