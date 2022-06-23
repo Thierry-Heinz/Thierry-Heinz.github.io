@@ -36,6 +36,8 @@
       .list-item__content {
         display: inline-block;
         width: calc(100% - 40px);
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         * {
           text-overflow: ellipsis;
